@@ -1,0 +1,217 @@
+* {
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  @font-face {
+    font-family: "HARRYP";
+    src: url(../assets/font/HARRYP__.TTF);
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(../assets/img/background.jpg);
+  }
+  
+  .body_personajes {
+    background-image: url(../assets/img/background3.webp);
+  }
+  
+  header {
+    background-color: #343a40;
+    color: white;
+    padding: 1em 0;
+  }
+  
+  h1,
+  h2 {
+    font-family: "HARRYP";
+    font-size: 80px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 1em;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "HARRYP";
+    font-size: 40px;
+  }
+  
+  main {
+    padding: 2em;
+    text-align: center;
+  }
+  
+  .intro {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
+  .grid,
+  .personajes,
+  .hechizos,
+  .Gryffindor,
+  .Slytherin,
+  .Hufflepuff,
+  .Ravenclaw,
+  .Hogwarts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 40px;
+    margin-bottom: 10px;
+    font-family: "HARRYP";
+  }
+  
+  .card {
+    background-color: #343a40;
+    color: gray;
+    box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  .card-content {
+    padding: 1px;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .card-content h4 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .go-top-container {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 4.6rem;
+    height: 4.6rem;
+    z-index: -1;
+  }
+  
+  .go-top-button {
+    width: 0rem;
+    height: 0rem;
+    background: rgb(39, 112, 189);
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  
+  .go-top-button svg {
+    position: absolute;
+    font-size: 1rem;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: white;
+  }
+  
+  .show {
+    z-index: 10;
+  }
+  
+  .show .go-top-button {
+    animation: popup 0.3s ease-in-out;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: 11;
+  }
+  
+  .show svg {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  @keyframes popup {
+    0% {
+      width: 0rem;
+      height: 0rem;
+    }
+    50% {
+      width: 8rem;
+      height: 8rem;
+    }
+    100% {
+      width: 6.6rem;
+      height: 6.6rem;
+    }
+  }
+  
+  footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  @media (max-width: 880px) {
+    .grid,
+    .personajes,
+    .hechizos,
+    .Gryffindor,
+    .Slytherin,
+    .Hufflepuff,
+    .Ravenclaw,
+    .Hogwarts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .tab-content-container {
+      flex-direction: column;
+    }
+  
+    .tabs-section {
+      margin-bottom: 100px;
+    }
+  
+    .text-content p {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .grid,
+    .personajes,
+    .hechizos,
+    .Gryffindor,
+    .Slytherin,
+    .Hufflepuff,
+    .Ravenclaw,
+    .Hogwarts {
+      grid-template-columns: 1fr;
+    }
+  }
